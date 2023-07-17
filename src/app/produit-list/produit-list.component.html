@@ -1,0 +1,23 @@
+<h2> Produit List</h2>
+<table class = "table table-striped">
+  <thead>
+  <tr>
+    <th> Nom</th>
+    <th> prix unitaire </th>
+    <th> quantite</th>
+    <th> Actions </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor = "let produit of produits" >
+    <td> {{ produit.nom }} </td>
+    <td> {{ produit.prixUnitaire }} </td>
+    <td> {{ produit.quantite }} </td>
+    <td>
+      <button (click) = "updateProduit(produit.id)" class = "btn btn-info"> Update</button>
+      <button (click) = "deleteProduit(produit.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+      <button (click) = "employeeDetails(produit.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
